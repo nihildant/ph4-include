@@ -1,3 +1,92 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+    <link rel="icon" href="img/favicon.jpg" type="image/x-icon">
+    <title>pf4-하이트진로</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/greeting.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
+    
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<!-- snsSlide / titleani  -->
+    <script src="js/load-common.js"></script>
+    <!-- aside애니 -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("aside .wrap ul.list > li h3").hover(function(){
+                if($(window).width()>1200){
+                    $("aside").addClass("sliding");
+                    $(this).next().find(".listsub").show();
+                    $(this).parent().siblings().find(".listsub").hide();
+                    $(this).addClass("current");//노란표시
+                    $(this).next().find(".listsub").addClass("wide");
+                    $(this).parent().siblings().children("h3").removeClass("current");
+                    $(this).parent().siblings().find(".listsub").hide().removeClass("wide");
+                }
+            });
+            //h3 a을 클릭하면 실행하시오
+            $("aside .wrap ul.list > li h3 a").click(function(){
+                // 마우스클릭한 요소 다음에 오는 것을 slideToggle하시오
+                $(this).parent().next().slideToggle();
+                $(this).parent().parent().siblings().children("div").slideUp();
+                return false;
+            });
+
+            $("aside").mouseleave(function(){
+                $("aside").removeClass("sliding");
+            });
+            //brand를 클릭하면 실행하시오
+            $("header .wrap nav>h2").click(function(){
+                //aside에 클래스를 토글하시오
+                $("aside").toggleClass("asideSliding");
+                $("header .wrap nav .wgnb").removeClass("wgnbShow");
+            });
+
+        });
+    </script>	
+</head>
+<body>
+    
+    <!-- 상단영역 -->
+   <header id="top"></header>
+   <!-- 메인영역 -->
+   <main>
+        <section id="greeting">
+            <div class="wrap paddingT50 paddingB50">
+                <ol class="breadcrumb">
+                    <li><a href="">home</a></li>
+                    <li><a href="">회사소개</a></li>
+                    <li class="active">인사말</li>
+                </ol>
+                <p class="underC">
+                  <strong class="h2 block">공사중입니다</strong>
+                  <img src="img/underS.svg" alt="">
+               </p>
+            </div>
+        </section>
+   </main>
+   <aside></aside>
+   <!-- 하단영역 -->
+   <footer></footer>
+</body>
+</html>
+=======
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -155,4 +244,5 @@
    <footer></footer>
 </body>
 </html>
+>>>>>>> 2d6980ef5e870d5c6ba317594dc70b715e96cd6d
 </html>
